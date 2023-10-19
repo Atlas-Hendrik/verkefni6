@@ -15,10 +15,8 @@
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.29.3",
+    "concurrently": "^8.2.2",
     "sass": "^1.69.4",
     "stylelint": "^15.11.0"
-  },
-  "dependencies": {
-    "concurrently": "^8.2.2"
   }
 }
