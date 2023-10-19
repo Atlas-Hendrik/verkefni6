@@ -1,0 +1,342 @@
+/* Reset og border-box á allt */
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  html {
+    box-sizing: border-box;
+  }
+  
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+  
+  /* Leturgerðir */
+  
+  @font-face {
+    font-family: 'Lora';
+    font-style: normal;
+    font-display: swap;
+    src: url(./fonts/Lora-VariableFont_wght.ttf) format('woff');
+  }
+  
+  @font-face {
+    font-family: 'Noto Sans Display';
+    font-style: normal;
+    font-display: swap;
+    src: url(./fonts/NotoSansDisplay-VariableFont.ttf) format('woff');
+  }
+  
+  /* Stillingar */
+  
+  :root {
+    /* Grunn bilið okkar er 1rem == 16px */
+    --font-base-body-px: 16px;
+    --spacing: 1rem;
+  
+    /* Bil á milli „stærri“ eininga (header, efnisbox, footer) */
+    --vertical-space: calc(var(--gutter));
+  
+    /* Hámarksbreidd á efni */
+    --max-width: 1400px;
+    --width-offset: calc(100% - (2 * var(--offset)));
+  
+    /* Border breiddir */
+    --border-small: 1px;
+    --border-large: 8px;
+    --border-radius: 6px;
+  
+    /* Litir */
+    --color-gold: #ffe7ae;
+    --color-gold-light: #fff1cf;
+    --color-dark: #2f0505;
+    --color-light: #fff9ee;
+  
+    /* Grid stillingar */
+    --columns: 12;
+    --gutter: 30px;
+    --offset: 20px;
+  
+    /* Letur stillingar */
+    --font-base-size: 1rem;
+    --font-family-base: 'Noto Sans Display', Helvetica, Arial, sans-serif;
+    --font-family-heading: 'Lora', Georgia, serif;
+  
+    /* Transitions */
+    --transition-time-short: 300ms;
+    --transition-time-long: 600ms;
+    --transition-timing-function: ease-in-out;
+  }
+  
+  /* Almennt */
+  
+  html,
+  input,
+  select,
+  button {
+    font-size: var(--font-base-body-px);
+    font-family: var(--font-family-base);
+  }
+  
+  h1,
+  h2,
+  h3 {
+    /* Setjum almennt bil á eftir fyrirsögnum */
+    margin-bottom: var(--spacing);
+  
+    font-family: var(--font-family-heading);
+  }
+  
+  a {
+    color: inherit;
+    background-color: inherit;
+  }
+  
+  img {
+    max-width: 100%;
+  }
+
+  #wrapper {
+    opacity: 0; 
+    transition: opacity 2s; 
+  }
+
+  /** Hjálpar class sem felur sjónrænt en skjálesarar lesa **/
+  .sr-only:not(:focus):not(:active) {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+
+  /* Reset some default styles */
+body, h1, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Define styles for the header */
+.header {
+  background-color: var(--color-dark);
+  color: var(--color-gold-light);
+  padding: 20px; 
+  text-align: center;
+}
+
+.header header h1 {
+  font-size: 24px; 
+}
+
+.header header p {
+  font-size: 14px; 
+}
+
+.sr-only {
+  display: none; 
+}
+
+.navigation ul {
+  list-style-type: none; 
+  text-align: center;
+}
+
+.navigation li {
+  display: inline; 
+  margin-right: 20px; 
+}
+
+.navigation a {
+  text-decoration: none; 
+  color: var(--color-gold-light);
+  font-weight: bold; 
+}
+.navigation a:hover {
+  text-decoration: underline; 
+}
+
+
+
+body {
+  background-color: var(--color-light);
+  font-family: Lora, noto Sans Display;
+}
+
+.main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: var(--color-light);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: var(--color-dark);
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.boxes {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.box {
+  width: calc(50% - 20px);
+  margin: 10px;
+  background-color: var(--color-gold);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 500px 1000px 1400px rgba(1, 2, 3);
+}
+
+.title {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: var(--color-dark);
+}
+
+.content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.content p {
+  font-size: 14px;
+  color: var(--color-dark);
+}
+
+  /* Takki */
+  
+  /** Útfæra takka + kvikun **/
+  
+  /* Kvikun */
+  
+  /** Útfæra kvikun á efni þegar síða opnuð **/
+  
+  /* Layout */
+  
+  /** Útfæra layout með grid **/
+  
+  /* Haus */
+  
+  /** Útfæra haus með grid **/
+  
+  /* Valmynd */
+  
+  /** Útfæra valmynd með grid **/
+  
+  /** Meginmál **/
+  
+  /** Útfæra meginmál með grid **/
+  
+  /** Fótur **/
+  
+  /** Útfæra fót með grid **/
+  
+  /* Box! */
+  
+  /** Útfæra box með grid **/
+  
+  /* Opnunartími */
+  
+  dt {
+    font-weight: bold;
+  }
+  
+  dd {
+    margin-bottom: var(--spacing);
+  }
+  
+  /* Matseðill */
+  
+  table {
+    border-spacing: 0;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  table th,
+  table td {
+    padding: calc(var(--spacing) * 0.5);
+    text-align: left;
+    border: 1px solid #ffe7ae;
+  }
+  
+  table tbody tr:nth-child(2n + 1) {
+    color: var(--color-dark);
+    background-color: var(--color-gold);
+  }
+  
+  table tr:first-child {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    text-align: center;
+  }
+  
+  table td:last-child {
+    text-align: right;
+    font-weight: bold;
+  }
+  
+  table tr:hover {
+    background-color: #fff1cf;
+    cursor: pointer;
+  }
+  
+  /* Pöntunarform */
+  form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--color-gold);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  
+
+
+  footer {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: var(--color-dark);
+    color: var(--color-light);
+  }
+
+  .footer-section {
+    padding: 20px;
+    text-align: center;
+    color: var(--color-light);
+  }
+
+
+.element-to-scale {
+  transform: scale(500px - 1000px); 
+}
+
+
+
+
+
+
+  
