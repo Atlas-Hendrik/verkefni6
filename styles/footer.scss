@@ -1,0 +1,14 @@
+footer {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: var(--color-dark);
+    color: var(--color-light);
+  }
+
+  .footer-section {
+    padding: 20px;
+    text-align: center;
+    color: var(--color-light);
+  }
